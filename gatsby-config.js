@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Emmanuel Baptist Church`,
+    description: `Welcome to the website of Emmanuel Baptist Church, based in Gallup, New Mexico. Emmanual Baptist Church holds services on Sundays and Wednesdays lead by Pastor Mike Kleeberger.`,
+    author: `Jeremiah Perez`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
