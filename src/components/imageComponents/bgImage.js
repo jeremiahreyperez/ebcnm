@@ -1,6 +1,7 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import MediaQuery from "react-responsive"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,7 +14,7 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+const BGImage = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -27,18 +28,30 @@ const Image = () => (
       }
     `}
     render={data => (
-      <Img
-        fluid={data.placeholderImage.childImageSharp.fluid}
-        style={imgStyle}
-      />
+      <>
+        <MediaQuery query="(max-device-width: 425px)">
+          <Img
+            fluid={data.placeholderImage.childImageSharp.fluid}
+            style={{
+              height: `75vh`,
+              filter: `brightness(75%)`,
+              zIndex: `-1`,
+            }}
+          />
+        </MediaQuery>
+        <MediaQuery query="(min-device-width: 426px)">
+          <Img
+            fluid={data.placeholderImage.childImageSharp.fluid}
+            style={{
+              height: `100vh`,
+              filter: `brightness(75%)`,
+              zIndex: `-1`,
+            }}
+          />
+        </MediaQuery>
+      </>
     )}
   />
 )
 
-const imgStyle = {
-  textAlign: "center",
-  height: "100vh",
-  filter: "brightness(75%)",
-}
-
-export default Image
+export default BGImage
