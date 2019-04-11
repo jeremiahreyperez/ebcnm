@@ -1,71 +1,38 @@
 import React from "react"
 
-import MediaQuery from "react-responsive"
-
 import Navbar from "./navbar.js"
 
 const HomeSection = ({ siteTitle }) => {
   return (
     <div style={{ display: `flex`, justifyContent: `center` }}>
       <Navbar />
-      <MediaQuery query="(max-device-width: 425px)">
-        <div id="home" style={homeStyle}>
-          <h1
-            style={{
-              marginBottom: `1.5rem`,
-              fontSize: `30px`,
-              fontWeight: `500`,
-            }}
-          >
-            {siteTitle}
-          </h1>
-          <p
-            style={{
-              marginBottom: `1rem`,
-              fontSize: `16px`,
-            }}
-          >
-            Stop in on your way to eternity!
-          </p>
-          <div>
-            <a href="#about" style={mobileBtnStyle}>
-              Learn more!
-            </a>
-            <a href="#visit" style={mobileBtnStyle}>
-              Visit us!
-            </a>
-          </div>
+      <div id="home" style={homeStyle}>
+        <h1
+          style={{
+            marginBottom: `1.5rem`,
+            fontSize: `40px`,
+            fontWeight: `500`,
+          }}
+        >
+          {siteTitle}
+        </h1>
+        <p
+          style={{
+            marginBottom: `1.5rem`,
+            fontSize: `20px`,
+          }}
+        >
+          Stop in on your way to eternity!
+        </p>
+        <div>
+          <a href="#about" style={btnStyle}>
+            Learn more!
+          </a>
+          <a href="#visit" style={btnStyle}>
+            Visit us!
+          </a>
         </div>
-      </MediaQuery>
-      <MediaQuery query="(min-device-width: 426px)">
-        <div id="home" style={homeStyle}>
-          <h1
-            style={{
-              marginBottom: `1.5rem`,
-              fontSize: `40px`,
-              fontWeight: `500`,
-            }}
-          >
-            {siteTitle}
-          </h1>
-          <p
-            style={{
-              marginBottom: `1.5rem`,
-              fontSize: `20px`,
-            }}
-          >
-            Stop in on your way to eternity!
-          </p>
-          <div>
-            <a href="#about" style={btnStyle}>
-              Learn more!
-            </a>
-            <a href="#visit" style={btnStyle}>
-              Visit us!
-            </a>
-          </div>
-        </div>
-      </MediaQuery>
+      </div>
     </div>
   )
 }

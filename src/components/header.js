@@ -19,6 +19,7 @@ const Header = ({ siteTitle }) => (
 )
 
 const headerStyle = {
+  height: "100vh",
   width: "100%",
   position: "relative",
 }
