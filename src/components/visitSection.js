@@ -70,7 +70,7 @@ const VisitSection = () => {
           </div>
           <div
             style={{
-              height: `100%`,
+              maxWidth: `768px`,
               gridArea: `1 / 2/ 3 / 3`,
               border: `solid 2px #aaa`,
             }}
