@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -8,7 +8,7 @@ const ChurchImage = () => (
       query {
         placeholderImage: file(relativePath: { eq: "church.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 500) {
               ...GatsbyImageSharpFluid
             }
           }

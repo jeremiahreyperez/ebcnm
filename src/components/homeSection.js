@@ -1,5 +1,3 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 import MediaQuery from "react-responsive"
@@ -27,7 +25,7 @@ const HomeSection = ({ siteTitle }) => {
               fontSize: `16px`,
             }}
           >
-            Stop in on your way to eternity
+            Stop in on your way to eternity!
           </p>
           <div>
             <a href="#about" style={mobileBtnStyle}>
@@ -56,7 +54,7 @@ const HomeSection = ({ siteTitle }) => {
               fontSize: `20px`,
             }}
           >
-            Stop in on your way to eternity
+            Stop in on your way to eternity!
           </p>
           <div>
             <a href="#about" style={btnStyle}>
@@ -86,7 +84,7 @@ const btnStyle = {
   color: "#f0f0f0",
   margin: ".5rem 1rem",
   padding: ".5rem 0",
-  backgroundColor: "#3498db",
+  backgroundColor: "#0984e3",
   borderRadius: "3px",
   boxShadow: "2px 3px 3px #333",
 }
@@ -98,7 +96,7 @@ const mobileBtnStyle = {
   color: "#f0f0f0",
   margin: ".5rem 1rem",
   padding: ".5rem 0",
-  backgroundColor: "#3498db",
+  backgroundColor: "#0984e3",
   borderRadius: "3px",
   boxShadow: "2px 3px 3px #333",
 }

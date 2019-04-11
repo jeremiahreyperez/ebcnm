@@ -1,11 +1,7 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 import ChurchImage from "./imageComponents/churchImage"
 import PersonImage from "./imageComponents/personImage"
-
-import MediaQuery from "react-responsive"
 
 const AboutSection = () => {
   return (
@@ -13,7 +9,7 @@ const AboutSection = () => {
       <div
         style={{
           fontSize: "20px",
-          gridColumn: `2 / 6`,
+          gridColumn: `1 / 4`,
           gridRow: `1 / 2`,
         }}
       >
@@ -25,8 +21,8 @@ const AboutSection = () => {
       </div>
       <div
         style={{
-          maxWidth: `300px`,
-          gridColumn: `6 / 8`,
+          maxWidth: `500px`,
+          gridColumn: `4 / 6`,
           gridRow: `1 / 2`,
         }}
       >
@@ -34,8 +30,8 @@ const AboutSection = () => {
       </div>
       <div
         style={{
-          maxWidth: `300px`,
-          gridColumn: `2 / 4`,
+          maxWidth: `500px`,
+          gridColumn: `1 / 3`,
           gridRow: `2 / 3`,
         }}
       >
@@ -44,7 +40,7 @@ const AboutSection = () => {
       <div
         style={{
           fontSize: "20px",
-          gridColumn: `4 / 8`,
+          gridColumn: `3 / 6`,
           gridRow: `2 / 3`,
         }}
       >
@@ -53,42 +49,6 @@ const AboutSection = () => {
         ducimus id nobis est recusandae, minima atque sapiente delectus ex ullam
         obcaecati perspiciatis iusto ipsa dolorem doloremque doloribus, repellat
         fugiat. Magni, minus?
-      </div>
-      <div
-        style={{
-          maxWidth: `300px`,
-          gridColumn: `1 / 3`,
-          gridRow: `3 / 4`,
-        }}
-      >
-        <PersonImage />
-      </div>
-      <div
-        style={{
-          maxWidth: `300px`,
-          gridColumn: `3 / 5`,
-          gridRow: `3 / 4`,
-        }}
-      >
-        <PersonImage />
-      </div>
-      <div
-        style={{
-          maxWidth: `300px`,
-          gridColumn: `5 / 7`,
-          gridRow: `3 / 4`,
-        }}
-      >
-        <PersonImage />
-      </div>
-      <div
-        style={{
-          maxWidth: `300px`,
-          gridColumn: `7 / 9`,
-          gridRow: `3 / 4`,
-        }}
-      >
-        <PersonImage />
       </div>
     </div>
   )
@@ -97,9 +57,9 @@ const AboutSection = () => {
 const gridStyle = {
   margin: "1.5rem auto",
   display: "grid",
-  maxWidth: 960,
-  gridTemplateColumns: "repeat(8, 1fr)",
-  gridTemplateRows: "repeat(3, 1fr)",
+  maxWidth: 768,
+  gridTemplateColumns: "repeat(5, 1fr)",
+  gridTemplateRows: "repeat(2, 1fr)",
   gridGap: "3rem 1rem",
 }
 

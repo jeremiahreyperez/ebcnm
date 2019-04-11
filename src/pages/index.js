@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import AboutSection from "../components/aboutSection"
+import VisitSection from "../components/visitSection"
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +13,7 @@ const IndexPage = () => (
       keywords={[`emmanuel`, `baptist`, `church`, `gallup`, `new mexico`]}
     />
     <AboutSection />
+    <VisitSection />
   </Layout>
 )
 
