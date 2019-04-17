@@ -1,5 +1,5 @@
 import React from "react"
-import MapImage from "./imageComponents/mapImage"
+import MapImage from "./mapImage"
 
 const VisitSection = () => {
   return (
@@ -38,17 +38,16 @@ const VisitSection = () => {
               gridArea: `1 / 1 / 2 /2`,
             }}
           >
-            <h3>Service Times:</h3>
-            <ul
-              style={{
-                listStyle: `none`,
-                padding: `10px 0`,
-              }}
-            >
-              <li>10AM Sunday - Sunday School</li>
-              <li>11AM Sunday - Morning Service</li>
-              <li>5PM Sunday - Evening Service</li>
-              <li>6PM Wednesday - Prayer Meeting</li>
+            <h3>Meeting Times -</h3>
+            <h4 style={{ margin: `4px 0` }}>Sundays:</h4>
+            <ul>
+              <li>10:00 AM - Sunday School for Kids and Adults</li>
+              <li>11:00 AM - Morning Service</li>
+              <li>6:00 PM - Evening Service</li>
+            </ul>
+            <h4 style={{ margin: `4px 0` }}>Wednesdays</h4>
+            <ul>
+              <li>7:00 PM - Bible Study / Prayer</li>
             </ul>
           </div>
           <div
@@ -56,23 +55,27 @@ const VisitSection = () => {
               gridArea: `2 / 1 / 3 /2`,
             }}
           >
-            <h3>How to get there:</h3>
+            <h3>Meeting Place -</h3>
             <p
               style={{
                 padding: `10px 0`,
               }}
             >
-              On Google Maps, Emmanuel Baptist Church is located at 213 Boardman
-              Ave, Gallup, NM 87301, but the physical location of the church is
-              further along Boardman Ave than listed on Google Maps.
+              213 State Road 564 (known as Boardman Drive) We are located in
+              McKinley County and just outside of the Gallup City limits. We are
+              about 2 miles from the intersection of Boardman and Highway 66.
+              Travel south from Highway 66 until you come to the church property
+              on the south side of the highway!
             </p>
-            <p>See the map to find the actual location on Google Maps.</p>
+            <p style={{ fontStyle: `italic` }}>
+              Transportation to regular services is available.
+            </p>
           </div>
           <div
             style={{
               maxWidth: `768px`,
               gridArea: `1 / 2/ 3 / 3`,
-              border: `solid 2px #aaa`,
+              // border: `solid 2px #aaa`,
             }}
           >
             <MapImage />

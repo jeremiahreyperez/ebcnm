@@ -1,20 +1,29 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import GlobalStyle from "../components/theme/globalStyle"
 
-import AboutSection from "../components/aboutSection"
+import StyledShowcase from "../components/showcase"
+import Navbar from "../components/navbar"
 import VisitSection from "../components/visitSection"
+import About from "../components/about"
+import Footer from "../components/footer"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      title="Home"
-      keywords={[`emmanuel`, `baptist`, `church`, `gallup`, `new mexico`]}
-    />
-    <AboutSection />
-    <VisitSection />
-  </Layout>
-)
+const Index = ({ data }) => {
+  return (
+    <>
+      <GlobalStyle />
+      <SEO
+        title="Home"
+        keywords={[`emmanuel`, `baptist`, `church`, `gallup`, `new mexico`]}
+      />
+      <Navbar />
+      <StyledShowcase />
+      <About />
+      <VisitSection />
+      <Footer />
+    </>
+  )
+}
 
-export default IndexPage
+export default Index
