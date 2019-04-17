@@ -38,7 +38,6 @@ const MainMenu = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  justify-content: center;
   padding: 1rem 4rem 0 4rem;
   margin: 0 auto;
   transition: transform 0.4s ease-out;
@@ -58,9 +57,12 @@ const StyledLink = styled(Link)`
   margin: 0.5rem 2rem;
   text-align: center;
   color: #eee;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.4s ease;
 
   :hover {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #eee;
+    transition: border-bottom 0.4s ease;
   }
 `
 

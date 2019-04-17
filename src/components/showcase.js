@@ -37,8 +37,8 @@ const Showcase = ({ className }) => (
             <Title>{siteTitle}</Title>
             <Tagline>Stop in on your way to eternity!</Tagline>
             <div>
-              <Button href="#about">Learn more!</Button>
-              <Button href="#visit">Visit us!</Button>
+              <Button href="#about">About</Button>
+              <Button href="#visit">Visit</Button>
             </div>
           </ShowcaseContent>
         </BackgroundImage>
@@ -50,7 +50,7 @@ const Showcase = ({ className }) => (
 const StyledShowcase = styled(Showcase)`
   width: 100%;
   background-position: bottom center;
-  background-repeat: repeat-y;
+  background-repeat: none;
   background-size: cover;
 `
 
@@ -88,24 +88,29 @@ const Button = styled.a`
   cursor: pointer;
   display: inline-block;
   font-size: 1.5rem;
-  width: 10rem;
+  width: 8rem;
+  height: 8rem;
+  vertical-align: middle;
   margin: 0.5rem 1rem;
-  padding: 0.5rem 0;
-  background-color: #0984e3;
-  border-radius: 3px;
-  box-shadow: 2px 3px 3px #333;
+  padding-top: 45px;
+  // background-color: #0984e3;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  // box-shadow: 2px 3px 3px #333;
   color: #eee;
   transition: background-color, color, 0.25s ease-in;
 
   :hover {
     background-color: #eee;
-    color: #0984e3;
+    color: #333;
     transition: background-color, color, 0.5s ease-out;
   }
 
   @media (max-width: 768px) {
     font-size: 1rem;
-    width: 7rem;
+    width: 5rem;
+    height: 5rem;
+    padding-top: 27px;
   }
 `
 
