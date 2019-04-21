@@ -14,7 +14,7 @@ const Showcase = ({ className }) => (
             title
           }
         }
-        desktop: file(relativePath: { eq: "Bible-background-image.jpg" }) {
+        showcaseBG: file(relativePath: { eq: "showcase-background.jpg" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
@@ -24,7 +24,7 @@ const Showcase = ({ className }) => (
       }
     `}
     render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
+      const imageData = data.showcaseBG.childImageSharp.fluid
       const siteTitle = data.site.siteMetadata.title
       return (
         <BackgroundImage

@@ -21,7 +21,7 @@ const Navbar = () => {
         </StyledLink>
         <StyledLink to="#about">About Us</StyledLink>
         <StyledLink to="#visit">Plan a Visit</StyledLink>
-        <StyledLink to="#connect">Connect</StyledLink>
+        <StyledLink to="#contact">Contact</StyledLink>
       </MainMenu>
     </NavWrapper>
   )
@@ -29,7 +29,7 @@ const Navbar = () => {
 
 const NavWrapper = styled.nav`
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
 `
@@ -61,8 +61,10 @@ const StyledLink = styled(Link)`
   transition: border-bottom 0.4s ease;
 
   :hover {
-    border-bottom: 1px solid #eee;
-    transition: border-bottom 0.4s ease;
+    @media: (min-width: 769px) {
+      border-bottom: 1px solid #eee;
+      transition: border-bottom 0.4s ease;
+    }
   }
 `
 
@@ -78,6 +80,7 @@ const Toggler = styled.input`
 
   :checked + div > div {
     transform: rotate(135deg);
+    background-color: #eee;
   }
 
   :checked + div > div:before,
@@ -110,9 +113,9 @@ const MenuIcon = styled.div`
   div {
     position: relative;
     width: 100%;
-    height: 2px;
-    background-color: #eee;
-    transition: transform, top, 0.3s ease;
+    height: 3px;
+    background-color: #cd853f;
+    transition: transform, top, background-color, 0.3s ease;
   }
 
   div:before,
@@ -121,7 +124,7 @@ const MenuIcon = styled.div`
     position: absolute;
     top: -10px;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: inherit;
   }
 

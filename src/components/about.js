@@ -37,7 +37,7 @@ const About = () => (
       return (
         <AboutContainer id="about">
           <SectionTitle>About Us</SectionTitle>
-          <Container>
+          <GridContainer>
             <CardOne>
               <h3>Our Heritage...</h3>
               <ul>
@@ -107,7 +107,7 @@ const About = () => (
             <StyledImgThree>
               <Img fluid={auditoriumImg} />
             </StyledImgThree>
-          </Container>
+          </GridContainer>
         </AboutContainer>
       )
     }}
@@ -124,7 +124,7 @@ const SectionTitle = styled.h2`
   font-size: 2rem;
 `
 
-const Container = styled.div`
+const GridContainer = styled.div`
   display: grid;
   max-width: 1000px;
   grid-template-columns: repeat(3, 1fr);
@@ -177,7 +177,6 @@ const ListItem = styled.li`
 
 const StyledImg = styled.div`
   width: 300px;
-  // padding: 0 1rem;
   justify-self: center;
 `
 

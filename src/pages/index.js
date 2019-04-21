@@ -5,9 +5,9 @@ import GlobalStyle from "../components/theme/globalStyle"
 
 import StyledShowcase from "../components/showcase"
 import Navbar from "../components/navbar"
-import VisitSection from "../components/visitSection"
 import About from "../components/about"
 import Footer from "../components/footer"
+import Visit from "../components/visit"
 
 const Index = ({ data }) => {
   return (
@@ -20,7 +20,7 @@ const Index = ({ data }) => {
       <Navbar />
       <StyledShowcase />
       <About />
-      <VisitSection />
+      <Visit />
       <Footer />
     </>
   )
