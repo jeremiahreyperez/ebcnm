@@ -9,14 +9,14 @@ const Visit = () => (
       query {
         roadviewImage: file(relativePath: { eq: "road-view.png" }) {
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mapImage: file(relativePath: { eq: "map.png" }) {
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -54,15 +54,17 @@ const Visit = () => (
               </p>
               <Aside>Transportation to regular services is available.</Aside>
             </MeetingInfo>
+          </FlexContainer>
+          <ImgContainer>
             <StyledImg>
               <Img fluid={viewImg} />
-              <Aside>View from State Road 564.</Aside>
+              <ImgDesc>View from State Road 564</ImgDesc>
             </StyledImg>
             <StyledImg>
               <Img fluid={mapImg} />
-              <Aside>Location on Google Maps.</Aside>
+              <ImgDesc>Location on Google Maps</ImgDesc>
             </StyledImg>
-          </FlexContainer>
+          </ImgContainer>
         </VisitContainer>
       )
     }}
@@ -81,8 +83,14 @@ const SectionTitle = styled.h2`
 
 const FlexContainer = styled.div`
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
   justify-content: center;
+`
+
+const ImgContainer = styled(FlexContainer)`
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: ;
 `
 
 const MeetingInfo = styled.div`
@@ -106,12 +114,17 @@ const MeetingInfo = styled.div`
 const Aside = styled.p`
   font-style: italic;
   font-size: 14px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+`
+
+const ImgDesc = styled.p`
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 14px;
 `
 
 const StyledImg = styled.div`
   width: 600px;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
 `
 
 export default Visit
