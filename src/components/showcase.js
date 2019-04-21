@@ -1,9 +1,13 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
-import Navbar from "./navbar"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+
+library.add(faChevronDown)
 
 const Showcase = ({ className }) => (
   <StaticQuery
@@ -40,6 +44,9 @@ const Showcase = ({ className }) => (
               <Button href="#about">About</Button>
               <Button href="#visit">Visit</Button>
             </div>
+            <Link to="#about">
+              <Chevron icon="chevron-down" />
+            </Link>
           </ShowcaseContent>
         </BackgroundImage>
       )
@@ -81,6 +88,7 @@ const Tagline = styled.p`
 
   @media (max-width: 768px) {
     font-size: 1rem;
+    margin-bottom: 0.75rem;
   }
 `
 
@@ -111,6 +119,19 @@ const Button = styled.a`
     width: 5rem;
     height: 5rem;
     padding-top: 27px;
+  }
+`
+
+const Chevron = styled(FontAwesomeIcon)`
+  font-size: 3rem;
+  position: absolute;
+  bottom: 5%;
+  color: white;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease-out;
+
+  :hover {
+    transform: translateX(-50%) translateY(10%);
   }
 `
 

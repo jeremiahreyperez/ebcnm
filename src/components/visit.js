@@ -90,7 +90,7 @@ const FlexContainer = styled.div`
 const ImgContainer = styled(FlexContainer)`
   flex-direction: column;
   align-items: center;
-  margin-bottom: ;
+  margin-bottom: 1rem;
 `
 
 const MeetingInfo = styled.div`
@@ -124,7 +124,11 @@ const ImgDesc = styled.p`
 
 const StyledImg = styled.div`
   width: 600px;
-  margin: 1rem 0.5rem;
+  margin: 1rem 0;
+
+  @media (max-width: 600px) {
+    width: 300px;
+  }
 `
 
 export default Visit
