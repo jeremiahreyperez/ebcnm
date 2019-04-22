@@ -9,9 +9,9 @@ const NotFoundPage = () => (
     <h1>It's empty!</h1>
     <p>
       This page does not exist, so you will find this page empty just like Jesus
-      Christ's Tomb.
+      Christ's tomb.
     </p>
-    <Link>Return to Emmanuel Baptist Church's homepage.</Link>
+    <Link to="/">Return to Emmanuel Baptist Church's homepage.</Link>
   </>
 )
 

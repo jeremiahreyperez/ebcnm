@@ -95,7 +95,7 @@ const ImgContainer = styled(FlexContainer)`
 
 const MeetingInfo = styled.div`
   padding: 1rem;
-  max-width: 350px;
+  width: 350px;
 
   h4,
   h3 {
@@ -123,11 +123,15 @@ const ImgDesc = styled.p`
 `
 
 const StyledImg = styled.div`
-  width: 600px;
+  width: 768px;
   margin: 1rem 0;
 
-  @media (max-width: 600px) {
-    width: 300px;
+  @media (max-width: 768px) {
+    width: 500px;
+  }
+
+  @media (max-width: 500px) {
+    width: 320px;
   }
 `
 

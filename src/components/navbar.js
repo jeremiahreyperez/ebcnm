@@ -29,9 +29,13 @@ const Navbar = () => {
 
 const NavWrapper = styled.nav`
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    position: fixed;
+  }
 `
 
 const MainMenu = styled.div`
@@ -61,10 +65,8 @@ const StyledLink = styled(Link)`
   transition: border-bottom 0.4s ease;
 
   :hover {
-    @media: (min-width: 769px) {
-      border-bottom: 1px solid #eee;
-      transition: border-bottom 0.4s ease;
-    }
+    border-bottom: 1px solid #eee;
+    transition: border-bottom 0.4s ease;
   }
 `
 

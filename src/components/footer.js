@@ -31,7 +31,7 @@ const StyledFooter = styled.footer`
 
 const ContactInfo = styled.ul`
   display: flex;
-  width: 275px;
+  width: 280px;
   flex-direction: column;
   justify-content: space-around;
   text-align: left;

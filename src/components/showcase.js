@@ -9,7 +9,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 library.add(faChevronDown)
 
-const Showcase = ({ className }) => (
+const Showcase = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -31,9 +31,8 @@ const Showcase = ({ className }) => (
       const imageData = data.showcaseBG.childImageSharp.fluid
       const siteTitle = data.site.siteMetadata.title
       return (
-        <BackgroundImage
+        <StyledShowcase
           Tag="section"
-          class={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
         >
@@ -48,13 +47,13 @@ const Showcase = ({ className }) => (
               <Chevron icon="chevron-down" />
             </Link>
           </ShowcaseContent>
-        </BackgroundImage>
+        </StyledShowcase>
       )
     }}
   />
 )
 
-const StyledShowcase = styled(Showcase)`
+const StyledShowcase = styled(BackgroundImage)`
   width: 100%;
   background-position: bottom center;
   background-repeat: none;
@@ -135,4 +134,4 @@ const Chevron = styled(FontAwesomeIcon)`
   }
 `
 
-export default StyledShowcase
+export default Showcase
