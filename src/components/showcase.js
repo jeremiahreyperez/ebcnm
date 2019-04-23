@@ -57,7 +57,7 @@ const Showcase = () => (
 const StyledShowcase = styled(BackgroundImage)`
   width: 100%;
   height: 100vh;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: none;
   background-size: cover;
 `
