@@ -35,6 +35,7 @@ const Showcase = () => (
           Tag="section"
           fluid={imageData}
           backgroundColor={`#040e18`}
+          alt="Bible Background Image"
         >
           <ShowcaseContent>
             <Title>{siteTitle}</Title>
@@ -55,7 +56,8 @@ const Showcase = () => (
 
 const StyledShowcase = styled(BackgroundImage)`
   width: 100%;
-  background-position: bottom center;
+  height: 100vh;
+  background-position: center;
   background-repeat: none;
   background-size: cover;
 `

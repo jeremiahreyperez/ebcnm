@@ -99,13 +99,19 @@ const About = () => (
               </ul>
             </CardThree>
             <StyledImgOne>
-              <Img fluid={signImg} />
+              <Img fluid={signImg} alt="Emmanuel Baptist Church's sign" />
             </StyledImgOne>
             <StyledImgTwo>
-              <Img fluid={pastorImg} />
+              <Img
+                fluid={pastorImg}
+                alt="Pastor Mike Kleeberger and his wife Elizabeth"
+              />
             </StyledImgTwo>
             <StyledImgThree>
-              <Img fluid={auditoriumImg} />
+              <Img
+                fluid={auditoriumImg}
+                alt="Emmanuel Baptist Church auditorium"
+              />
             </StyledImgThree>
           </GridContainer>
         </AboutContainer>
