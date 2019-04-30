@@ -102,10 +102,8 @@ const Button = styled.a`
   vertical-align: middle;
   margin: 0.5rem 1rem;
   padding-top: 45px;
-  // background-color: #0984e3;
   border: 2px solid #eee;
   border-radius: 50%;
-  // box-shadow: 2px 3px 3px #333;
   color: #eee;
   transition: background-color, color, 0.25s ease-in;
 
@@ -127,7 +125,7 @@ const Chevron = styled(FontAwesomeIcon)`
   font-size: 3rem;
   position: absolute;
   bottom: 5%;
-  color: white;
+  color: #eee;
   transform: translateX(-50%);
   transition: transform 0.5s ease-out;
 

@@ -120,9 +120,9 @@ const About = () => (
   />
 )
 
-const AboutContainer = styled.div`
+const AboutContainer = styled.section`
   background-color: #eaf4ff;
-  padding: 3.5rem 0 1rem 0;
+  padding: 3.5rem 0 3rem 0;
 `
 
 const SectionTitle = styled.h2`
@@ -144,7 +144,7 @@ const GridContainer = styled.div`
   grid-gap: 2rem;
   flex-wrap: wrap;
   padding: 2rem;
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
 
   @media (max-width: 680px) {
     grid-template-areas:

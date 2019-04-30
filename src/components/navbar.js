@@ -98,6 +98,10 @@ const Toggler = styled.input`
   @media (min-width: 769px) {
     visibility: hidden;
   }
+
+  :focus {
+    none;
+  }
 `
 
 const MenuIcon = styled.div`

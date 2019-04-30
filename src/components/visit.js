@@ -71,9 +71,9 @@ const Visit = () => (
   />
 )
 
-const VisitContainer = styled.div`
+const VisitContainer = styled.section`
   background-color: #e3e3e3;
-  padding: 3.5rem 0 1rem 0;
+  padding: 3.5rem 0 3rem 0;
 `
 
 const SectionTitle = styled.h2`
