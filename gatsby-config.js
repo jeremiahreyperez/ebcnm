@@ -27,5 +27,6 @@ module.exports = {
         icon: `src/images/book.png`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }
