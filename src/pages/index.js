@@ -2,6 +2,7 @@ import React from "react"
 
 import SEO from "../components/seo"
 import GlobalStyle from "../components/theme/globalStyle"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import Showcase from "../components/showcase"
 import Navbar from "../components/navbar"
