@@ -15,7 +15,18 @@ const Index = () => {
       <GlobalStyle />
       <SEO
         title="Home"
-        keywords={[`emmanuel`, `baptist`, `church`, `gallup`, `new mexico`]}
+        keywords={[
+          `emmanuel`,
+          `baptist`,
+          `church`,
+          `gallup`,
+          `new mexico`,
+          `emmanuel gallup`,
+          `emmanuel baptist church`,
+          `baptist church`,
+          `nm`,
+          `mike kleeberger`,
+        ]}
       />
       <Navbar />
       <Showcase />
