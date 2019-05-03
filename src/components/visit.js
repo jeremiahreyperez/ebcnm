@@ -14,10 +14,18 @@ const Visit = () => (
             }
           }
         }
+        mapImage: file(relativePath: { eq: "map.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `}
     render={data => {
       const viewImg = data.roadviewImage.childImageSharp.fluid
+      const mapImg = data.mapImage.childImageSharp.fluid
       return (
         <VisitContainer id="visit">
           <SectionTitle>Visit Us!</SectionTitle>
@@ -53,9 +61,9 @@ const Visit = () => (
           </StyledImg>
           <Map>
             <MapFrame
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5582.012051742311!2d-108.72082203069075!3d35.50518914829841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8724de648b7481c1%3A0xdd88e61810c20eb3!2sEmmanuel+Baptist+Church!5e0!3m2!1sen!2sus!4v1556852389243!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5582.033072854125!2d-108.72034393041233!3d35.504886709188106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8724de648b7481c1%3A0xdd88e61810c20eb3!2sEmmanuel+Baptist+Church!5e0!3m2!1sen!2sus!4v1556859208492!5m2!1sen!2sus"
               frameborder="0"
-              scrolling="no"
+              allowfullscreen
             />
           </Map>
         </VisitContainer>
@@ -85,7 +93,7 @@ const MeetingInfo = styled.div`
 
 const MeetingInfoItem = styled.div`
   padding: 1rem;
-  width: 350px;
+  width: 320px;
 
   h4,
   h3 {
@@ -122,24 +130,25 @@ const StyledImg = styled.div`
 `
 
 const Map = styled.div`
-  padding-bottom: 432px;
   position: relative;
-  height: 0;
+  height: 0
+  padding-bottom: 432px;
   width: 768px;
-  overflow: hidden;
+  overflow hidden;
 
   @media (max-width: 768px) {
     width: 100%;
     padding-bottom: 56.25%;
   }
 `
+
 const MapFrame = styled.iframe`
-  border: 0;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
 `
 
 export default Visit

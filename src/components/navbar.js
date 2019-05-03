@@ -42,7 +42,7 @@ const MainMenu = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  padding-top: 1rem;
+  padding: 1rem 4rem 0 4rem;
   margin: 0 auto;
   transition: transform 0.4s ease-out;
 
