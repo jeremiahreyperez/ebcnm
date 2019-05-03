@@ -16,12 +16,12 @@ const Navbar = () => {
         <div />
       </MenuIcon>
       <MainMenu>
-        <StyledLink to="/" onClick={toggleCheckbox}>
+        <HomeButton to="/" onClick={toggleCheckbox}>
           Home
-        </StyledLink>
-        <StyledLink to="#about">About Us</StyledLink>
-        <StyledLink to="#visit">Plan a Visit</StyledLink>
-        <StyledLink to="#contact">Contact</StyledLink>
+        </HomeButton>
+        <NavItem href="#about">About Us</NavItem>
+        <NavItem href="#visit">Plan a Visit</NavItem>
+        <NavItem href="#contact">Contact</NavItem>
       </MainMenu>
     </NavWrapper>
   )
@@ -55,7 +55,22 @@ const MainMenu = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const NavItem = styled.a`
+  width: 100px;
+  padding-bottom: 0.5rem;
+  margin: 0.5rem 2rem;
+  text-align: center;
+  color: #eee;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.4s ease;
+
+  :hover {
+    border-bottom: 1px solid #eee;
+    transition: border-bottom 0.4s ease;
+  }
+`
+
+const HomeButton = styled(Link)`
   width: 100px;
   padding-bottom: 0.5rem;
   margin: 0.5rem 2rem;

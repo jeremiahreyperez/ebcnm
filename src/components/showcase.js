@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery, Link } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 
@@ -32,6 +32,7 @@ const Showcase = () => (
       const siteTitle = data.site.siteMetadata.title
       return (
         <StyledShowcase
+          id="page-top"
           Tag="section"
           fluid={imageData}
           backgroundColor={`#040e18`}
@@ -44,9 +45,9 @@ const Showcase = () => (
               <Button href="#about">About</Button>
               <Button href="#visit">Visit</Button>
             </div>
-            <Link to="#about">
-              <Chevron icon="chevron-down" />
-            </Link>
+            <ChevronLlink href="#about">
+              <FontAwesomeIcon icon="chevron-down" />
+            </ChevronLlink>
           </ShowcaseContent>
         </StyledShowcase>
       )
@@ -121,16 +122,16 @@ const Button = styled.a`
   }
 `
 
-const Chevron = styled(FontAwesomeIcon)`
+const ChevronLlink = styled.a`
   font-size: 3rem;
   position: absolute;
   bottom: 5%;
   color: #eee;
-  transform: translateX(-50%);
+  // transform: translateX(-50%);
   transition: transform 0.5s ease-out;
 
   :hover {
-    transform: translateX(-50%) translateY(10%);
+    transform: translateY(20%);
   }
 `
 

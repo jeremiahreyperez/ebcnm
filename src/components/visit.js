@@ -14,18 +14,10 @@ const Visit = () => (
             }
           }
         }
-        mapImage: file(relativePath: { eq: "map.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     `}
     render={data => {
       const viewImg = data.roadviewImage.childImageSharp.fluid
-      const mapImg = data.mapImage.childImageSharp.fluid
       return (
         <VisitContainer id="visit">
           <SectionTitle>Visit Us!</SectionTitle>
@@ -57,7 +49,7 @@ const Visit = () => (
           </MeetingInfo>
           <StyledImg>
             <Img fluid={viewImg} />
-            <ImgDesc>View from State Road 564</ImgDesc>
+            <Desc>View from State Road 564</Desc>
           </StyledImg>
           <Map>
             <MapFrame
@@ -66,6 +58,7 @@ const Visit = () => (
               allowfullscreen
             />
           </Map>
+          <Desc>Google Maps Location</Desc>
         </VisitContainer>
       )
     }}
@@ -93,7 +86,7 @@ const MeetingInfo = styled.div`
 
 const MeetingInfoItem = styled.div`
   padding: 1rem;
-  width: 320px;
+  width: 375px;
 
   h4,
   h3 {
@@ -107,6 +100,10 @@ const MeetingInfoItem = styled.div`
     font-family: Georgia, "Times New Roman", Times, serif;
     line-height: 1.5;
   }
+
+  @media (max-width: 376px) {
+    width: 320px;
+  }
 `
 
 const Aside = styled.p`
@@ -114,9 +111,9 @@ const Aside = styled.p`
   font-size: 14px;
 `
 
-const ImgDesc = styled.p`
+const Desc = styled.p`
   text-align: center;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
   font-size: 14px;
 `
 
@@ -131,7 +128,7 @@ const StyledImg = styled.div`
 
 const Map = styled.div`
   position: relative;
-  height: 0
+  height: 0;
   padding-bottom: 432px;
   width: 768px;
   overflow hidden;
