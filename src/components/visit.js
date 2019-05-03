@@ -14,23 +14,15 @@ const Visit = () => (
             }
           }
         }
-        mapImage: file(relativePath: { eq: "map.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     `}
     render={data => {
       const viewImg = data.roadviewImage.childImageSharp.fluid
-      const mapImg = data.mapImage.childImageSharp.fluid
       return (
         <VisitContainer id="visit">
           <SectionTitle>Visit Us!</SectionTitle>
-          <FlexContainer>
-            <MeetingInfo>
+          <MeetingInfo>
+            <MeetingInfoItem>
               <h3>Meeting Times</h3>
               <h4>Sundays:</h4>
               <ul>
@@ -42,8 +34,8 @@ const Visit = () => (
               <ul>
                 <li>7:00 PM - Bible Study / Prayer</li>
               </ul>
-            </MeetingInfo>
-            <MeetingInfo>
+            </MeetingInfoItem>
+            <MeetingInfoItem>
               <h3>Meeting Place</h3>
               <p>
                 213 State Road 564 (known as Boardman Drive) We are located in
@@ -53,18 +45,19 @@ const Visit = () => (
                 property on the south side of the highway!
               </p>
               <Aside>Transportation to regular services is available.</Aside>
-            </MeetingInfo>
-          </FlexContainer>
-          <ImgContainer>
-            <StyledImg>
-              <Img fluid={viewImg} />
-              <ImgDesc>View from State Road 564</ImgDesc>
-            </StyledImg>
-            <StyledImg>
-              <Img fluid={mapImg} />
-              <ImgDesc>Location on Google Maps</ImgDesc>
-            </StyledImg>
-          </ImgContainer>
+            </MeetingInfoItem>
+          </MeetingInfo>
+          <StyledImg>
+            <Img fluid={viewImg} />
+            <ImgDesc>View from State Road 564</ImgDesc>
+          </StyledImg>
+          <Map>
+            <MapFrame
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5582.012051742311!2d-108.72082203069075!3d35.50518914829841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8724de648b7481c1%3A0xdd88e61810c20eb3!2sEmmanuel+Baptist+Church!5e0!3m2!1sen!2sus!4v1556852389243!5m2!1sen!2sus"
+              frameborder="0"
+              scrolling="no"
+            />
+          </Map>
         </VisitContainer>
       )
     }}
@@ -73,7 +66,10 @@ const Visit = () => (
 
 const VisitContainer = styled.section`
   background-color: #e3e3e3;
-  padding: 3.5rem 0 3rem 0;
+  padding: 3.5rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const SectionTitle = styled.h2`
@@ -81,19 +77,13 @@ const SectionTitle = styled.h2`
   font-size: 2rem;
 `
 
-const FlexContainer = styled.div`
+const MeetingInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `
 
-const ImgContainer = styled(FlexContainer)`
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-`
-
-const MeetingInfo = styled.div`
+const MeetingInfoItem = styled.div`
   padding: 1rem;
   width: 350px;
 
@@ -127,12 +117,29 @@ const StyledImg = styled.div`
   margin: 1rem 0;
 
   @media (max-width: 768px) {
-    width: 500px;
+    width: 100%;
   }
+`
 
-  @media (max-width: 500px) {
-    width: 320px;
+const Map = styled.div`
+  padding-bottom: 432px;
+  position: relative;
+  height: 0;
+  width: 768px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-bottom: 56.25%;
   }
+`
+const MapFrame = styled.iframe`
+  border: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 `
 
 export default Visit
