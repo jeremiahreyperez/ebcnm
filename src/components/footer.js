@@ -28,9 +28,7 @@ const Footer = () => {
           213 State Road 564, Gallup, NM 37301
         </li>
       </ContactInfo>
-      © {new Date().getFullYear()}
-      {` `}
-      <a href="https://www.jeremiahperez.com">Jeremiah Perez</a>
+      <small>© {new Date().getFullYear()} EMMANUEL BAPTIST CHURCH</small>
     </StyledFooter>
   )
 }
@@ -40,6 +38,7 @@ const StyledFooter = styled.footer`
   background-color: #333;
   color: #ddd;
   padding: 2rem;
+  padding-bottom: 4px;
   font-size: 14px;
 
   a {
