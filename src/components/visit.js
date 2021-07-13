@@ -26,8 +26,8 @@ const Visit = () => (
               <h3>Meeting Times</h3>
               <h4>Sundays:</h4>
               <ul>
-                <li>10:00 AM - Sunday School for Kids and Adults</li>
-                <li>11:00 AM - Morning Service</li>
+                <li>9:30 AM - Sunday School for Kids and Adults</li>
+                <li>10:30 AM - Morning Service</li>
                 <li>6:00 PM - Evening Service</li>
               </ul>
               <h4>Wednesdays:</h4>
